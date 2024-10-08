@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 # Load the data
-laptop_data = pd.read_csv('Cleaned_Laptop_data.csv')
+laptop_data = pd.read_csv('/content/Cleand_Laptop_data_Final.csv')
 
 # Clean the data
 laptop_data['ram_gb'] = laptop_data['ram_gb'].replace(r'[^\d]', '', regex=True)
@@ -75,4 +75,6 @@ if st.button("Get Recommendations"):
                 st.markdown(f"**HDD:** {laptop['hdd']} GB")
                 st.markdown(f"**Price:** ${laptop['latest_price']}")
                 st.markdown(f"**Rating:** {laptop['star_rating']} stars")
+                st.markdown(f"**BUY Link:** {laptop['buy link']}")
+
                 st.markdown("---")  # Horizontal line for separation
