@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 # Load the data
-laptop_data = pd.read_csv('/content/Cleand_Laptop_data_Final.csv')
+laptop_data = pd.read_csv('Cleand_Laptop_data_Final')
 
 # Clean the data
 laptop_data['ram_gb'] = laptop_data['ram_gb'].replace(r'[^\d]', '', regex=True)
